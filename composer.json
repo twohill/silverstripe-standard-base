@@ -2,7 +2,7 @@
     "name": "twohill/silverstripe-standard-base",
     "description": "The base SilverStripe installation recipe with development tools. Uses Webpack for frontend and Docker for hosting",
     "type": "silverstripe-recipe",
-    "license": "BSD-3",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Al Twohill",
