@@ -21,6 +21,7 @@
     },
     "extra": {
         "project-files": [
+            ".gitignore",
             ".editorconfig",
             "example.env",
             "docker-compose.yml",

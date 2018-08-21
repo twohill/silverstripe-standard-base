@@ -1,6 +1,6 @@
 # silverstripe-standard-base
 
-This is the standard base module used by Twohill & Co to get up and running in SilverStripe 4 quickly.
+This is the standard base recipe used by Twohill & Co to get up and running in SilverStripe 4 quickly.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ This is the standard base module used by Twohill & Co to get up and running in S
     mkdir public
     composer init
     composer require twohill/silverstripe-standard-base
-    yarn
+    yarn build
     ```
 
 1) Copy/rename `example.env` to `.env` and update the details as required.
@@ -52,4 +52,17 @@ This process will build and minify your scss, bundle your js, and copy in any im
 ## Known issues
 
 * You need to run `yarn build` whenever you add or change images as this is not picked up by the webpack hot reloader
-* The build process generates .js files for the css bundles as well. You can just ignore these 
+* The build process generates .js files for the css bundles as well. You can just ignore these.
+* There's effectively a doubleup of image files between src and dist. Ideas to improve on this are welcome
+
+## How to use this recipe
+
+### Javascript
+
+`app/client/src/js/main.js` is the starting point of the javascript application. You can use ES6 and it will be transpiled by babel for you. Note that no javascript frameworks are included with this recipe at this stage.
+
+If you are running webpack via `yarn watch` your page should automatically refresh as you make changes.
+
+### Stylesheets
+
+There are two stylesheet bundles created: `editor.scss` for the HTMLTextEditor, and `bundle.scss` for everything else. `bundle.scss` includes `editor.scss` so you do not need to repeat styles. You can split up your styles into multiple files to increase maintainablilty and webpack will minify them for you.

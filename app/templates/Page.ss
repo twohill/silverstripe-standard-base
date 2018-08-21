@@ -12,14 +12,15 @@
     <% if $WebpackRunning %>
         <link rel="stylesheet" href="//$WebpackIP:$WebpackPort/styles/bundle.css" />
     <% else %>
-    <% require themedCSS('client/dist/styles/bundle') %>
+        <% require themedCSS('client/dist/styles/bundle') %>
     <% end_if %>
-
 </head>
 <body class="$ClassName" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
+    <% include Header %>
     <div class="wrap" role="document">
        $Layout
     </div>
+    <% include Footer %>
     <% if $WebpackRunning %>
         <script src="//$WebpackIP:$WebpackPort/js/main.js"></script>
     <% else %>
