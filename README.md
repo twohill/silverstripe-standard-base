@@ -26,8 +26,9 @@ This is the standard base module used by Twohill & Co to get up and running in S
     ```sh
     copy example.env .env
     ```
+    You will need to update the `WEBPACK_IP` and `WEBPACK_PORT` to suit your environment for the hot reload feature to work correctly.
 
-    ***Please change the SQL root password in this file!***
+    ***Please ensure you change the SQL root password in this file!***
 
 1) Start up the docker container
 
@@ -40,7 +41,6 @@ This is the standard base module used by Twohill & Co to get up and running in S
     yarn watch
     ```
 
-
 ## Building for production
 
 ```sh
@@ -48,3 +48,8 @@ yarn build
 ```
 
 This process will build and minify your scss, bundle your js, and copy in any image files you have in `app/client/src/` and deploy it to `app/client/dist/`. Your templates should use the `dist` directory when published.
+
+## Known issues
+
+* You need to run `yarn build` whenever you add or change images as this is not picked up by the webpack hot reloader
+* The build process generates .js files for the css bundles as well. You can just ignore these 

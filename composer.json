@@ -28,6 +28,9 @@
             "webpack.config.js",
             "package.json",
             "app/*"  
-            ]
+            ],
+        "expose": [
+            "app/client/dist"
+        ]
     }
 }
