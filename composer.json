@@ -27,6 +27,7 @@
             "serve.config.js",
             "webpack.config.js",
             "package.json",
-            "app/client/dist/*"        ]
+            "app/client/dist/*"  
+            ]
     }
 }
