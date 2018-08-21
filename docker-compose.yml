@@ -1,21 +1,23 @@
 version: '3'
 services:
- web:
-   image: twohill/silverstripe4
-   working_dir: /var/www
-   ports:
-    - 80:80
-   volumes:
-    - .:/var/www/html
-
- database:
-   image: mariadb
-   volumes:
-    - db-data:/var/lib/mysql
-    - ./db:/root/import
-   restart: always
-   environment:
-     MYSQL_ROOT_PASSWORD: "${SS_DATABASE_PASSWORD}"
+  web:
+    image: twohill/silverstripe4
+    working_dir: /var/www
+    ports:
+      - 80:80
+    volumes:
+      - .:/var/www/html
+    environment:
+      WEBPACK_IP: "${WEBPACK_IP}"
+      WEBPACK_PORT: "${WEBPACK_PORT}"
+  database:
+    image: mariadb
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./db:/root/import
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "${SS_DATABASE_PASSWORD}"
 
 volumes:
- db-data:
+  db-data:

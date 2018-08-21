@@ -1,3 +1,3 @@
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('Javascript loaded');
+    console.log('silverstripe-standard-base loaded');
 });
