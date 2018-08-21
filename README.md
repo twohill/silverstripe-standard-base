@@ -5,7 +5,7 @@ This is the standard base module used by Twohill & Co to get up and running in S
 ## Prerequisites
 
 * Composer
-* NPM
+* Yarn
 * Docker
 
 ## Getting Started
@@ -18,6 +18,7 @@ This is the standard base module used by Twohill & Co to get up and running in S
     mkdir public
     composer init
     composer require twohill/silverstripe-standard-base
+    yarn
     ```
 
 1) Copy/rename `example.env` to `.env` and update the details as required.
@@ -28,12 +29,14 @@ This is the standard base module used by Twohill & Co to get up and running in S
 
     ***Please change the SQL root password in this file!***
 
-1) Start up the docker container and webpack
+1) Start up the docker container
 
     ```sh
     docker-compose up
+    ```
 
-    yarn
+1) Open a new terminal and start webpack
+    ```sh
     yarn watch
     ```
 
