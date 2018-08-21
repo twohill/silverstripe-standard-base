@@ -26,8 +26,6 @@
             "docker-compose.yml",
             "serve.config.js",
             "webpack.config.js",
-            "app/client/dist/*",
-            "public/*"
-        ]
+            "app/client/dist/*"        ]
     }
 }

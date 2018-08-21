@@ -10,9 +10,12 @@ This is the standard base module used by Twohill & Co to get up and running in S
 
 ## Getting Started
 
-1) Set up a new project and require this recipe
+1) Set up a new project and require this recipe. Note we create a public folder to force SilverStripe to use the new public webroot
 
     ```sh
+    mkdir my-project
+    cd my-project
+    mkdir public
     composer init
     composer require twohill/silverstripe-standard-base
     ```
