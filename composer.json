@@ -25,7 +25,8 @@
             "example.env",
             "docker-compose.yml",
             "serve.config.js",
-            "webpack.config.js"
+            "webpack.config.js",
+            "app/client/dist/*",
         ]
     }
 }

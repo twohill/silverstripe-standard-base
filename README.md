@@ -10,8 +10,19 @@ This is the standard base module used by Twohill & Co to get up and running in S
 
 ## Getting Started
 
-`composer create-project twohill/silverstripe-standard-base /path/to/project`
+Downloading and running the development environment:
 
-`SS_DATABASE_PASSWORD=mypass docker compose`
+```sh
+composer init
+composer require twohill/silverstripe-standard-base
 
-`npm watch`
+docker compose
+
+yarn
+yarn watch
+```
+
+Building for production
+```sh
+yarn build
+```
