@@ -10,15 +10,10 @@ This is the standard base recipe used by Twohill & Co to get up and running in S
 
 ## Getting Started
 
-1) It is generally best to "inline" this recipe as once you've installed it you will be customising a lot
+1) Create a composer project and build the frontend
 
     ```sh
-    mkdir my-project
-    cd my-project
-    composer init
-    mkdir public
-    composer require silverstripe/recipe-plugin
-    composer require-recipe twohill/silverstripe-standard-base
+    composer create-project twohill/silverstripe-standard-base
     yarn build
     ```
 
