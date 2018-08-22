@@ -1,0 +1,36 @@
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+}
+
+.bleed {
+  position: relative;
+  background: $gray-200;
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: $gray-200;
+    right: 100%;
+  }
+  &:after {
+    left: 100%;
+  }
+}
+
+header {
+  background-color: $gray-200;
+}
+
+footer {
+  background-color: $gray-200;
+}

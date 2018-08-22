@@ -10,14 +10,11 @@ This is the standard base recipe used by Twohill & Co to get up and running in S
 
 ## Getting Started
 
-1) Set up a new project and require this recipe. Note we create a public folder to force SilverStripe to use the new public webroot
+1) Create a project with the recipe and then install the front-end dependencies
 
     ```sh
-    mkdir my-project
+    composer create-project twohill/silverstripe-standard-base my-project
     cd my-project
-    mkdir public
-    composer init
-    composer require twohill/silverstripe-standard-base
     yarn build
     ```
 
@@ -59,10 +56,14 @@ This process will build and minify your scss, bundle your js, and copy in any im
 
 ### Javascript
 
-`app/client/src/js/main.js` is the starting point of the javascript application. You can use ES6 and it will be transpiled by babel for you. Note that no javascript frameworks are included with this recipe at this stage.
+`app/client/src/js/main.js` is the starting point of the javascript application. You can use ES6 and it will be transpiled by babel for you. jQuery is bundled in along with Bootstrap 4.
+
+Add additional javascript frameworks with `yarn add --dev PACKAGE_NAME`.
 
 If you are running webpack via `yarn watch` your page should automatically refresh as you make changes.
 
 ### Stylesheets
 
 There are two stylesheet bundles created: `editor.scss` for the HTMLTextEditor, and `bundle.scss` for everything else. `bundle.scss` includes `editor.scss` so you do not need to repeat styles. You can split up your styles into multiple files to increase maintainablilty and webpack will minify them for you.
+
+Layout and default styling is managed with Bootstrap 4.

@@ -21,8 +21,9 @@
     },
     "extra": {
         "project-files": [
-            ".gitignore",
             ".editorconfig",
+            ".eslintrc",
+            ".gitignore",
             "example.env",
             "docker-compose.yml",
             "serve.config.js",

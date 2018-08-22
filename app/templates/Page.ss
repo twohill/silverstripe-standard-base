@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="$ContentLocale">
-
 <head>
     <% base_tag %>
     <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
@@ -10,21 +9,21 @@
     $MetaTags(false)
 
     <% if $WebpackRunning %>
-        <link rel="stylesheet" href="//$WebpackIP:$WebpackPort/styles/bundle.css" />
+        <link rel="stylesheet" href="//$WebpackIP:$WebpackPort/styles/bundle.css"/>
     <% else %>
         <% require themedCSS('client/dist/styles/bundle') %>
     <% end_if %>
 </head>
 <body class="$ClassName" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
+<div class="wrapper">
     <% include Header %>
-    <div class="wrap" role="document">
-       $Layout
-    </div>
+    <article>$Layout</article>
     <% include Footer %>
+</div>
     <% if $WebpackRunning %>
-        <script src="//$WebpackIP:$WebpackPort/js/main.js"></script>
+    <script src="//$WebpackIP:$WebpackPort/js/main.js"></script>
     <% else %>
-        <script src="$ResourceURL(app)/client/dist/js/main.js"></script>
+    <script src="$ResourceURL(app)/client/dist/js/main.js"></script>
     <% end_if %>
 </body>
 </html>
