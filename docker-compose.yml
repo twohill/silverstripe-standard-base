@@ -10,12 +10,15 @@ services:
     environment:
       WEBPACK_IP: "${WEBPACK_IP}"
       WEBPACK_PORT: "${WEBPACK_PORT}"
+      XDEBUG_CONFIG: "remote_host=host.docker.internal remote_connect_back=0"
   database:
     image: mariadb
     volumes:
       - db-data:/var/lib/mysql
       - ./db:/root/import
     restart: always
+    ports:
+      # - 3306:3306 # uncomment if you need direct access to database
     environment:
       MYSQL_ROOT_PASSWORD: "${SS_DATABASE_PASSWORD}"
 
